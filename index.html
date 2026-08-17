@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloco de Notas - Checklist Diário</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="notebook">
+        <!-- CABEÇALHO -->
+        <div class="header">
+            <h1>
+                📓 Bloco
+                <small>checklist diário</small>
+            </h1>
+            <div class="header-actions">
+                <button class="btn btn-danger" id="clearAllBtn" title="Apagar todas as tarefas">
+                    🗑️ Limpar tudo
+                </button>
+            </div>
+        </div>
+
+        <!-- ROTINAS PRONTAS -->
+        <div class="routines">
+            <span class="routines-label">⚡ Rotinas:</span>
+            <button class="btn" data-routine="morning">
+                <span class="emoji">🌅</span> Manhã
+            </button>
+            <button class="btn" data-routine="work">
+                <span class="emoji">💼</span> Trabalho
+            </button>
+            <button class="btn" data-routine="evening">
+                <span class="emoji">🌙</span> Noite
+            </button>
+            <button class="btn" data-routine="health">
+                <span class="emoji">💪</span> Saúde
+            </button>
+        </div>
+
+        <!-- ÁREA DE ADIÇÃO -->
+        <div class="add-area">
+            <input type="text" id="taskInput" placeholder="Escreva sua meta ou atividade..." maxlength="120" />
+            <button class="btn btn-primary" id="addBtn">➕ Adicionar</button>
+        </div>
+
+        <!-- LISTA DE TAREFAS -->
+        <ul class="task-list" id="taskList">
+            <!-- itens serão inseridos via JS -->
+            <li class="empty-message">
+                <span class="emoji-big">📝</span>
+                Nenhuma tarefa ainda.<br />Adicione uma acima ou carregue uma rotina!
+            </li>
+        </ul>
+
+        <!-- RODAPÉ -->
+        <div class="footer">
+            <div class="count">
+                ✅ <span id="doneCount">0</span> / <span id="totalCount">0</span> concluídas
+            </div>
+            <div class="footer-actions">
+                <button class="btn btn-success" id="clearDoneBtn">✔️ Remover concluídas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
